@@ -41,7 +41,6 @@ env PATH=$PATH:/usr/local/bin pm2 startup -u ubuntu &&
 # Start to listening in port 4000
 echo "const http = require('http'); const server = http.createServer((req, res) => { res.statusCode = 200; res.setHeader('Content-Type', 'text/plain'); res.end('Hello, World!'); }); server.listen(4000, () => { console.log('Server running at http://localhost:3000'); });" > hello-world.js && pm2 start hello-world.js --name backend &&
 
-
 git clone https://github.com/yefringeovany/Table-yefrin.git &&
 cd Table-yefrin &&
 cd client &&
@@ -59,7 +58,7 @@ systemctl restart nginx &&
 # Deploying backend for the first time
 cd .. &&
 cd server &&
-echo MONGODB_URI = "mongodb+srv://Frnn:noobculo@mongocluster.o2eojyk.mongodb.net/snappy?retryWrites=true&w=majority" > .env &&
+echo MONGODB_URI = "mongodb+srv://yefrin200:123miumg@yefrincluster.n3re7rf.mongodb.net/CRUD_TABLE?retryWrites=true&w=majority" > .env &&
 # Start the application with PM2
 npm install &&
 pm2 delete backend &&
